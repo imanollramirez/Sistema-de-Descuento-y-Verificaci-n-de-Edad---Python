@@ -37,7 +37,7 @@ else:
 
 #Validaciones
 #1
-if(name == None or age == 0 or member == None):
+if(name == None or age == None or member == None):
     print("Ingrese lo datos, porfavor.")
 else:
     age = int(age)
