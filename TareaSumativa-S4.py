@@ -20,6 +20,7 @@ se debe mostrar un mensaje de error.
 print("****************************************")
 print("         B I E N V E N I D O / A        ")
 print("           Calcular membresía           ")
+print("              Precio:  100              ")
 print("**************************************")
 
 name = input('Ingrese su nombre: ')
@@ -35,6 +36,9 @@ elif(member.lower() == 'n'):
 else:
     member = None
 
+price = 100.00
+discount = 0.0
+
 #Validaciones
 #1
 if(name == None or age == None or member == None):
@@ -42,13 +46,16 @@ if(name == None or age == None or member == None):
 else:
     age = int(age)
     if(age < 18 and member):
-        print(f'{name}, su descuento en la membresía es de 20%.')  
+        discount = 0.20
+        print('Descuento aplicado: 20%')  
     elif(age >= 18 and age <= 25 and member):
-        print(f'{name}, su descuento en la membresía es de 10%.')  
+        discount = 0.1 
+        print('Descuento aplicado: 10%')  
     elif(age > 60 and member):
-        print(f'{name}, pague un cantidad reducida.')  
-    elif(age > 25):
-        print(f'{name}, le informamos que no aplican descuentos para su membresía, pague el total.')  
+        discount = 0.15  
+        print('Descuento aplicado: 15%')  
     elif(not member):
         print(f'{name}, no aplican descuentos.')
 
+    total = price - (price * discount)
+    print(f'Pague: {total}')
