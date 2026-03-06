@@ -21,7 +21,7 @@ print("****************************************")
 print("         B I E N V E N I D O / A        ")
 print("           Calcular membresía           ")
 print("              Precio:  100              ")
-print("**************************************")
+print("****************************************")
 
 name = input('Ingrese su nombre: ')
 
